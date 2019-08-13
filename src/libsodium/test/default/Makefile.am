@@ -74,7 +74,6 @@ EXTRA_DIST = \
 	sodium_core.exp \
 	sodium_utils.exp \
 	sodium_utils2.exp \
-	sodium_utils3.exp \
 	sodium_version.exp \
 	stream.exp \
 	stream2.exp \
@@ -154,7 +153,6 @@ DISTCLEANFILES = \
 	sodium_core.res \
 	sodium_utils.res \
 	sodium_utils2.res \
-	sodium_utils3.res \
 	sodium_version.res \
 	stream.res \
 	stream2.res \
@@ -244,8 +242,7 @@ TESTS_TARGETS = \
 
 if !EMSCRIPTEN
 TESTS_TARGETS += \
-	sodium_utils2 \
-	sodium_utils3
+	sodium_utils2
 endif
 
 check_PROGRAMS = $(TESTS_TARGETS)
@@ -461,9 +458,6 @@ sodium_utils_LDADD        = $(TESTS_LDADD)
 
 sodium_utils2_SOURCE      = cmptest.h sodium_utils2.c
 sodium_utils2_LDADD       = $(TESTS_LDADD)
-
-sodium_utils3_SOURCE      = cmptest.h sodium_utils3.c
-sodium_utils3_LDADD       = $(TESTS_LDADD)
 
 sodium_version_SOURCE     = cmptest.h sodium_version.c
 sodium_version_LDADD      = $(TESTS_LDADD)
